@@ -1,5 +1,4 @@
 import { FunctionComponent } from "preact/src/index.d.ts";
-import { useState } from "preact/hooks";
 
 
 type infoProps = {
@@ -12,17 +11,6 @@ type infoProps = {
 
 export const Modulo: FunctionComponent<infoProps>  = (props) => {
     const{nombre, mostrarMas, margen, texto} = props;
-    let [accionClick, setAccionClick]= useState(false)
-
-    const manejarClick = () => {
-        setAccionClick(true);
-
-        <div>
-            <text style={{color:"#000000",marginTop:20}}>
-                {texto}
-            </text>
-        </div>
-    };
 
     return (
         
@@ -39,9 +27,8 @@ borderWidth: 1,borderColor:"#000000", backgroundColor: "#91fd6c", marginTop: mar
                     <td style={{ width: "50%" }}>
                     </td>
                     <td style={{ width: "30%", height:"50", borderWidth: 1, borderColor: "#000000" }}>
-                    <button onClick={manejarClick}>
-                        {accionClick}
-                        {mostrarMas}
+                    <button onClick= {alert}>
+                     {mostrarMas}
                     </button>
                     </td>
                 </tr>
